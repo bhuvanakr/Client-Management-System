@@ -19,7 +19,7 @@
       </div>
       <div class="card-body">
         <p>{{client.notes}}</p>
-
+        <p><a href="{% url 'client_edit' client.pk %}">Edit</a> | <a href="{% url 'client_delete' client.pk %}">Delete</a></p>
       </div>
       <div class="card-footer">
         {% for comment in client.comments.all %}
